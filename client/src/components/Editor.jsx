@@ -53,7 +53,7 @@ const Editor = ({
     handleInputChange("");
     handleOutputChange("");
     try {
-      const response = await fetch(`${"http://localhost:5000/"}run-code`, {
+      const response = await fetch(`${"https://codeeditor-1xy3.onrender.com/"}run-code`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
