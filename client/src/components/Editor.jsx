@@ -2,28 +2,24 @@ import React, { useState, useEffect } from "react";
 import AceEditor from "react-ace";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRotateRight } from "@fortawesome/free-solid-svg-icons";
-import SplitPane from "react-split-pane";
-
-// Brace modes
+import SplitPane from "react-split-pane"; 
+ 
 import "brace/mode/javascript";
 import "brace/mode/c_cpp";
 import "brace/mode/java";
 import "brace/mode/python";
-
-// Brace themes and extensions
+ 
 import "brace/theme/dracula";
 import "brace/theme/monokai";
 import "brace/ext/language_tools";
 
-// components
-import ResetModal from "./ResetModal";
+ import ResetModal from "./ResetModal";
 
 import LanguageInfoModal from "./LanguageInfoModal";
 
-// CSS
+ 
 import "./Editor.css";
-
-//constants
+ 
 import stubs from "../stubs";
 import ACTIONS from "../Actions";
 
@@ -297,7 +293,7 @@ const Editor = ({
                 readOnly
                 type="text"
                 id="output"
-                className="outline-none h-[200px] md:border-b-2  text-lg text-emerald-500 w-full p-2 bg-slate-900 md:h-[450px]"
+                className="outline-none sm:border-l-2 h-[200px] md:border-b-2  text-lg text-emerald-500 w-full p-2 bg-slate-900 md:h-[450px]"
                 aria-label="Output"
                 placeholder="Output"
                 value={output}
